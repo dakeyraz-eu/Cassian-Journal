@@ -1,4 +1,4 @@
-# Journal de l'Aventurier — Cassian Vael
+# Journal de l'Aventurier — Cassian Vael & Friends
 
 Petit site statique HTML/CSS prêt à publier sur GitHub Pages.
 
