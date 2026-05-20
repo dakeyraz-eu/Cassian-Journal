@@ -312,4 +312,37 @@ footer {
     box-shadow: none;
     border-radius: 0;
   }
+  /* Conteneur principal qui active le côte-à-côte */
+.journal-split {
+  display: flex;
+  align-items: center; /* Centre verticalement le texte par rapport à l'image */
+  gap: 40px;           /* Espace de 40px entre le texte et l'image */
+  margin: 30px 0;      /* Espace au-dessus et en-dessous du bloc */
+  width: 100%;
+}
+
+/* Répartition des espaces (Le texte prend 60%, l'image prend 40%) */
+.journal-texte {
+  flex: 1.2;
+}
+
+.journal-image {
+  flex: 0.8;
+}
+
+/* Force l'image à s'adapter à la taille de son bloc sans déborder */
+.journal-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 4px; /* Optionnel : léger arrondi pour coller au style de ton site */
+}
+
+/* Responsive : Si l'écran est petit (mobile), on empile le texte et l'image */
+@media (max-width: 768px) {
+  .journal-split {
+    flex-direction: column; 
+    gap: 20px;
+  }
+}
 }
