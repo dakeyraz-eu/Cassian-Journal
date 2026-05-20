@@ -307,6 +307,17 @@ footer {
   max-width: 100%;
   height: auto;
   border-radius: 12px;
+
+  -webkit-mask-image: radial-gradient(
+    ellipse at center,
+    black 72%,
+    transparent 100%
+  );
+  mask-image: radial-gradient(
+    ellipse at center,
+    black 72%,
+    transparent 100%
+  );
 }
 
 @media (max-width: 768px) {
