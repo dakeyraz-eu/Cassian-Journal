@@ -312,16 +312,15 @@ footer {
     box-shadow: none;
     border-radius: 0;
   }
-  /* Conteneur principal qui active le côte-à-côte */
+ /* Le conteneur qui met le texte et l'image côte à côte */
 .journal-split {
   display: flex;
+  gap: 40px;           /* Espace entre le texte et l'image */
   align-items: center; /* Centre verticalement le texte par rapport à l'image */
-  gap: 40px;           /* Espace de 40px entre le texte et l'image */
   margin: 30px 0;      /* Espace au-dessus et en-dessous du bloc */
-  width: 100%;
 }
 
-/* Répartition des espaces (Le texte prend 60%, l'image prend 40%) */
+/* Répartition des colonnes (60% pour le texte, 40% pour l'image) */
 .journal-texte {
   flex: 1.2;
 }
@@ -330,18 +329,18 @@ footer {
   flex: 0.8;
 }
 
-/* Force l'image à s'adapter à la taille de son bloc sans déborder */
+/* LE FIX IMPORTANT : On bride l'image pour qu'elle ne dépasse jamais de sa colonne */
 .journal-image img {
+  max-width: 100%;
   width: 100%;
   height: auto;
   display: block;
-  border-radius: 4px; /* Optionnel : léger arrondi pour coller au style de ton site */
 }
 
-/* Responsive : Si l'écran est petit (mobile), on empile le texte et l'image */
+/* Version mobile : on empile le tout sur petit écran */
 @media (max-width: 768px) {
   .journal-split {
-    flex-direction: column; 
+    flex-direction: column;
     gap: 20px;
   }
 }
